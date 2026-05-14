@@ -1,0 +1,22 @@
+# Build output
+dist/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# NVDA add-on package — never commit binaries; they're built from source via build.ps1
+*.nvda-addon
+*.zip

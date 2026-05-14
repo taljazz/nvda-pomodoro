@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pomodoro Timer for NVDA</title>
+</head>
+<body>
+<h1>Pomodoro Timer for NVDA</h1>
+
+<p>A focused-work timer based on the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a>, designed for screen reader users. The add-on announces phase transitions through speech and short tones, so you can stay focused on your work without watching a clock.</p>
+
+<h2>Default cycle</h2>
+<ul>
+<li>25 minutes of focused work.</li>
+<li>5 minute short break.</li>
+<li>After every 4 work sessions, a 15 minute long break instead of a short break.</li>
+</ul>
+<p>All durations and most behaviours can be changed in NVDA Settings.</p>
+
+<h2>Gestures</h2>
+<p>All gestures can be rebound from NVDA's Input Gestures dialog under the <em>Pomodoro Timer</em> category.</p>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th>Default gesture</th><th>Action</th></tr>
+<tr><td>NVDA+Alt+P</td><td>Start a new pomodoro session, or pause or resume the current one.</td></tr>
+<tr><td>NVDA+Alt+S</td><td>Stop the timer and reset the session counter.</td></tr>
+<tr><td>NVDA+Alt+T</td><td>Speak the current phase, time remaining, and number of completed work sessions.</td></tr>
+<tr><td>NVDA+Alt+N</td><td>Skip the current phase and advance to the next one.</td></tr>
+<tr><td>NVDA+Alt+R</td><td>Reset the completed session counter to zero without stopping a running phase.</td></tr>
+</table>
+
+<h2>Phase transition tones</h2>
+<ul>
+<li><strong>Work starts</strong>: three-note ascending tone (C, E, G).</li>
+<li><strong>Short break starts</strong>: gentle two-note descending tone.</li>
+<li><strong>Long break starts</strong>: four-note ascending fanfare.</li>
+<li><strong>Phase finished, waiting for you</strong>: a short two-note ding.</li>
+<li><strong>Timer stopped</strong>: two low descending tones.</li>
+<li><strong>Periodic time-remaining tick</strong>: a single soft high ping, played before the spoken time-remaining update.</li>
+</ul>
+<p>Tones can be turned off in settings if you would rather rely on speech only.</p>
+
+<h2>Settings</h2>
+<p>Open <strong>NVDA menu, Preferences, Settings, Pomodoro Timer</strong>. Options:</p>
+<ul>
+<li><strong>Work duration (minutes)</strong> — length of each work phase, default 25.</li>
+<li><strong>Short break duration (minutes)</strong> — default 5.</li>
+<li><strong>Long break duration (minutes)</strong> — default 15.</li>
+<li><strong>Work sessions before a long break</strong> — default 4.</li>
+<li><strong>Automatically start breaks when work ends</strong> — on by default. When off, NVDA announces that work is finished and waits for you to press the start gesture again before the break begins.</li>
+<li><strong>Automatically start the next work session when a break ends</strong> — off by default. When off (the recommended setting) NVDA announces that the break is over and waits for you to press start, so an unattended computer does not silently begin the next work phase.</li>
+<li><strong>Play tones at phase transitions</strong> — on by default.</li>
+<li><strong>Speak announcements at phase transitions</strong> — on by default.</li>
+<li><strong>Announce remaining time every N minutes</strong> — periodic reminder of how much time is left in the current phase. Default 0, which disables the reminder.</li>
+<li><strong>Play a short tone with the periodic time-remaining announcement</strong> — when the periodic announcement is enabled, play a soft attention ping just before the spoken update. On by default. Gated independently of the phase-transition tones, so you can mix and match.</li>
+</ul>
+
+<h2>Notes</h2>
+<ul>
+<li>The timer state is held in memory only. Restarting NVDA, or exiting and reopening it, will stop the timer. This is intentional so that a stale timer from yesterday does not unexpectedly fire today.</li>
+<li>The session counter resets to zero when you press the stop gesture. Use the reset-counter gesture (NVDA+Alt+R) if you want to clear the counter without interrupting a running phase.</li>
+<li>The timer relies on NVDA being running. If you exit NVDA mid-phase the timer ends with NVDA.</li>
+</ul>
+
+<h2>Author</h2>
+<p>Thomas, 2026. Licensed under the GNU GPL v2 or later.</p>
+</body>
+</html>
