@@ -17,7 +17,7 @@ All gestures are rebindable from NVDA's Input Gestures dialog under the **Pomodo
 | NVDA+Alt+P | Start a new session, or pause / resume the current one. |
 | NVDA+Alt+S | Stop the timer and reset the session counter. |
 | NVDA+Alt+T | Speak current phase, time remaining, and completed sessions. |
-| NVDA+Alt+N | Skip the current phase and advance to the next one. |
+| NVDA+Alt+K | Skip the current phase and advance to the next one. |
 | NVDA+Alt+R | Reset the completed session counter without stopping a running phase. |
 
 ## Installation

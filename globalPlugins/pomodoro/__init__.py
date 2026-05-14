@@ -325,7 +325,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@scriptHandler.script(
 		# Translators: described in Input help for the skip-phase Pomodoro gesture.
 		description=_("Pomodoro: skip the current phase and advance to the next one."),
-		gesture="kb:NVDA+alt+n",
+		gesture="kb:NVDA+alt+k",
 	)
 	def script_skip(self, gesture) -> None:
 		if self._timer.phase == PHASE_IDLE:

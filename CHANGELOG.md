@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2
+
+- Changed the default "skip phase" gesture from `NVDA+Alt+N` to `NVDA+Alt+K` ("sKip") to avoid conflict with the navSounds add-on, which uses `NVDA+Alt+N` to toggle navigation sounds. Users who already rebound the gesture are unaffected.
+
 ## 1.1.1
 
 - Streamlined every spoken announcement: shorter wording, "left" instead of "remaining", dropped the redundant "Pomodoro" prefix.
